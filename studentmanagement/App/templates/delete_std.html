@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Student</title>
+
+<style>
+    body{
+        margin:0;
+        font-family: Arial, sans-serif;
+        background:#eef2f3;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        min-height:100vh;
+    }
+
+    .card{
+        background:white;
+        width:330px;
+        padding:25px;
+        border-radius:10px;
+        box-shadow:0 5px 15px rgba(0,0,0,0.15);
+        text-align:center;
+    }
+
+    h2{
+        color:#b30000;
+        font-size:22px;
+        margin-bottom:10px;
+    }
+
+    p{
+        font-size:15px;
+        margin-bottom:25px;
+    }
+
+    .btn{
+        width:100%;
+        padding:10px;
+        border:none;
+        border-radius:6px;
+        cursor:pointer;
+        font-size:15px;
+        margin:5px 0;
+        transition:.3s;
+    }
+
+    .btn-delete{
+        background:#d11a2a;
+        color:white;
+    }
+    .btn-delete:hover{
+        background:#b11320;
+    }
+
+    .btn-cancel{
+        background:#006ce0;
+    }
+
+    .btn-cancel a{
+        color:white;
+        text-decoration:none;
+        display:block;
+    }
+
+    .btn-cancel:hover{
+        background:#004fae;
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    
+
+
+    <h2>Delete Record</h2>
+    <p>Are you sure you want to delete <strong>{{students.name}}</strong>?</p>
+
+    <form method="POST">
+        {% csrf_token %}
+        <button class="btn btn-delete" type="submit">Yes, Delete</button>
+    </form>
+
+    <button class="btn btn-cancel">
+        <a href="{% url 'main' %}">Cancel</a>
+    </button>
+
+</div>
+
+</body>
+</html>

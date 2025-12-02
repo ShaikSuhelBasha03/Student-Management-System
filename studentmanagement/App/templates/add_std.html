@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Student</title>
+
+<style>
+    body{
+        margin:0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #eef2f3;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        min-height:100vh;
+        padding:20px;
+    }
+
+    .form-container{
+        background:white;
+        padding:30px;
+        border-radius:10px;
+        width:320px;
+        box-shadow:0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    h2{
+        text-align:center;
+        margin-bottom:20px;
+        font-size:20px;
+        color:#003d80;
+    }
+
+    label{
+        font-weight:600;
+        font-size:14px;
+    }
+
+    form input, form select, textarea{
+        width:100%;
+        padding:9px;
+        margin-bottom:12px;
+        border:1px solid #ccc;
+        border-radius:6px;
+        font-size:14px;
+        outline:none;
+        transition:0.3s;
+    }
+
+    form input:focus, textarea:focus, select:focus{
+        border-color:#006ce0;
+        box-shadow:0 0 5px rgba(0,108,224,0.3);
+    }
+
+    button{
+        width:100%;
+        padding:10px;
+        background:#006ce0;
+        border:none;
+        color:white;
+        border-radius:6px;
+        cursor:pointer;
+        font-size:15px;
+        margin-top:10px;
+        transition:0.3s;
+    }
+
+    button:hover{
+        background:#004fae;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="form-container">
+    
+
+
+
+<h2>Add Student</h2>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Save</button>
+</form>
+
+</div>
+
+</body>
+</html>

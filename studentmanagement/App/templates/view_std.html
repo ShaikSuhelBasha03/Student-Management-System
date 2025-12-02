@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Details</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2f3;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.12);
+        }
+
+        h1 {
+            text-align: center;
+            color: #003d80;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 15px;
+        }
+
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #e3e9f5;
+        }
+
+        th {
+            color: #003d80;
+            width: 30%;
+            text-align: left;
+        }
+
+        td {
+            background: #f8fafc;
+            border-radius: 5px;
+        }
+
+        tr:hover td {
+            background: #e9f1ff;
+            transition: 0.3s;
+        }
+
+        .btn-back {
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            background:#003d80;
+            color:white;
+            padding: 10px;
+            border-radius: 6px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-back:hover {
+            background:#0055b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Student Details</h1>
+
+    <table>
+        <tr><th>ID</th><td>{{ details.id }}</td></tr>
+        <tr><th>Name</th><td>{{ details.name }}</td></tr>
+        <tr><th>Age</th><td>{{ details.age }}</td></tr>
+        <tr><th>Gender</th><td>{{ details.gender }}</td></tr>
+        <tr><th>Phone</th><td>{{ details.phone }}</td></tr>
+        <tr><th>Email</th><td>{{ details.email }}</td></tr>
+        <tr><th>Course</th><td>{{ details.course }}</td></tr>
+        <tr><th>Join Date</th><td>{{ details.join_date }}</td></tr>
+        <tr><th>Address</th><td>{{ details.address }}</td></tr>
+        <tr><th>About</th><td>{{ details.about }}</td></tr>
+    </table>
+
+    <a href="{% url 'main' %}" class="btn-back">Back</a>
+</div>
+
+</body>
+</html>
