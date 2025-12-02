@@ -170,4 +170,4 @@ studentmanagement/
 └── manage.py
 --------------------------------
 Author
-Shaik Suhel Basha
+Shaik Suhel Basha 📧 GitHub: @ShaikSuhelBasha03
