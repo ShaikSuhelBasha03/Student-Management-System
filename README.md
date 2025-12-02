@@ -151,23 +151,27 @@ Are you sure you want to delete Kiran?
 
 [ Yes, Delete ]   [ Cancel ]
 ------------------------------------
-Project Structure
 studentmanagement/
+│
 ├── studentmanagement/
 │   └── urls.py
+│
 ├── App/
 │   ├── models.py
 │   ├── forms.py
 │   ├── views.py
-│   ├── templates/
-│   │   ├── index.html
-│   │   ├── add_std.html
-│   │   ├── update_std.html
-│   │   ├── student_list.html
-│   │   ├── delete_std.html
-│   │   └── view_std.html
+│   │
+│   └── templates/
+│       ├── index.html
+│       ├── add_std.html
+│       ├── update_std.html
+│       ├── student_list.html
+│       ├── delete_std.html
+│       └── view_std.html
+│
 ├── db.sqlite3
 └── manage.py
+
 --------------------------------
 Author
 Shaik Suhel Basha 📧 GitHub: @ShaikSuhelBasha03
